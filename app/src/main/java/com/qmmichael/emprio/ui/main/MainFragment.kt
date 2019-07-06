@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.qmmichael.emprio.R
 import com.qmmichael.emprio.databinding.MainFragmentBinding
+import com.qmmichael.emprio.ui.brand_list.BrandListActivity
 import com.qmmichael.emprio.ui.maps.MapsActivity
 
 class MainFragment : Fragment() {
@@ -34,6 +35,9 @@ class MainFragment : Fragment() {
     binding.viewModel = viewModel
     binding.goMapButton.setOnClickListener {
       startActivity(Intent(activity, MapsActivity::class.java))
+    }
+    binding.goBrandListBtn.setOnClickListener {
+      startActivity(Intent(activity, BrandListActivity::class.java))
     }
   }
 
