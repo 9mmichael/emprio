@@ -4,8 +4,8 @@
     >
   <data>
     <variable
-        name="brand"
-        type="com.qmmichael.emprio.data.model.Brand"
+        name="shop"
+        type="com.qmmichael.emprio.data.model.Shop"
         />
   </data>
   <LinearLayout
@@ -18,20 +18,21 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         >
-      <ImageView
-          android:id="@+id/icon"
-          android:layout_width="64dp"
-          android:layout_height="64dp"
-          android:src="@mipmap/ic_launcher"
-          />
       <TextView
-          android:id="@+id/name"
+          android:id="@+id/title"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginStart="8dp"
-          android:layout_toEndOf="@id/icon"
-          android:text="@{brand.name}"
-          tools:text="aaa"
+          android:text="@{shop.title}"
+          tools:text="FREITAG STORE TOKYO"
+          />
+      <TextView
+          android:id="@+id/address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/title"
+          android:layout_marginTop="8dp"
+          android:text="@{shop.address}"
+          tools:text="東京都渋谷区神宮前６丁目１９−１８"
           />
     </RelativeLayout>
     <View

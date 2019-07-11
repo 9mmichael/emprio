@@ -23,6 +23,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     val mapFragment = supportFragmentManager
         .findFragmentById(R.id.map) as SupportMapFragment
     mapFragment.getMapAsync(this)
+    setUpActionBar()
   }
 
   /**
@@ -51,5 +52,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
       }
       else -> super.onOptionsItemSelected(item)
     }
+  }
+
+  private fun setUpActionBar() {
+    actionBar?.title = "map"
+    actionBar?.setDisplayHomeAsUpEnabled(true)
   }
 }

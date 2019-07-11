@@ -11,5 +11,10 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_activity)
     setContentFragment(R.id.containerLayout) { MainFragment.newInstance() }
+    setUpActionBar()
+  }
+
+  private fun setUpActionBar() {
+    supportActionBar?.title = "home"
   }
 }
